@@ -1,0 +1,14 @@
+{
+    "name": "baraveli/rss",
+    "type": "proect",
+    "authors": [
+        {
+            "name": "dharis",
+            "email": "dharisd@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+        
+    }
+}
