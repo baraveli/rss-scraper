@@ -12,7 +12,7 @@ class ClientTest extends TestCase
     {
         $client = new \Baraveli\RssScraper\Http\Client();
 
-        $returnValue = $client->get('http://localhost/rss.xml');
+        $returnValue = $client->get('https://mihaaru.com/rss');
 
         $this->assertEquals(true, is_array($returnValue));
     }
