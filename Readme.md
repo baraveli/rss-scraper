@@ -1,6 +1,8 @@
 # Rss scraper
 
 [![Build Status](https://travis-ci.org/baraveli/rss-scraper.svg?branch=master)](https://travis-ci.org/baraveli/rss-scraper)
+[![Latest Stable Version](https://poser.pugx.org/baraveli/rss-scraper/v/stable)](https://packagist.org/packages/baraveli/rss-scraper)
+[![License](https://poser.pugx.org/baraveli/rss-scraper/license)](https://packagist.org/packages/baraveli/rss-scraper)
 
 Rss Scraper to scrap rss feed from news websites.
 
