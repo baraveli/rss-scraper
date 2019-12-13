@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/baraveli/rss-scraper.svg?branch=master)](https://travis-ci.org/baraveli/rss-scraper)
 
+Rss Scraper to scrap rss feed from news websites.
+
 ## Installation
 
 ```shell
@@ -14,7 +16,7 @@ This documentation decribe the rss scraper structure,usage and how the individua
 
 ## General Explanation:
 
-The rss scraper first get the rss feed of the news from the configuration add get the rss feed items and return the data as a json response or an array.
+The rss scraper get the rss feed of the news from the configuration and get the rss feed items and return the data as a json response or an array.
 
 - ### Config loader
 
