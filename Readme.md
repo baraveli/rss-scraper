@@ -75,7 +75,7 @@ class ConfigLoader implements IConfigLoader
 
 - ### :flashlight: Http Client
 
-Client class inside the Http directory of the rss scraper is used to send a http get request to the rss feed url to get the content. The class get method gets the content of the rss url and check if the returned data is a validxml content. <code>isValidXmL()</code> is helper method that is provided by the helper trait. if the isvalidxml check passes the xml file is then pass to the <code>simplexml_load_string()</code> function that is built into php. the returned loaded string get passed to <code>parseXML</code> method to return the decoded version of the xml file to php array. The data is then returned.
+Client class inside the Http directory of the RSS scraper is used to send HTTP request to the RSS feed URL specified in the config to get the content. The class get method gets the content of the RSS URL and check if the returned data is a validxml content. <code>isValidXmL()</code> is helper method that is provided by the helper trait. if the isvalidxml check passes the xml file is then pass to the <code>simplexml_load_string()</code> function that is built into php. the returned loaded string get passed to <code>parseXML</code> method to return the decoded version of the xml file to php array. The data is then returned.
 
 This classes uses guzzle to make the http request.
 
