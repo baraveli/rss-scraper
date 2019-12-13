@@ -12,13 +12,19 @@ Rss Scraper to scrap rss feed from news websites.
 composer require baraveli/rss-scraper
 ```
 
+satellite:
+
 ## Rss Scraper Specs
 
 This documentation decribe the rss scraper structure,usage and how the individual components work in the libary.
 
-## General Explanation:
+:crystal_ball:
+
+## General Explanation
 
 The rss scraper get the rss feed of the news from the configuration and get the rss feed items and return the data as a json response or an array.
+
+:hammer:
 
 - ### Config loader
 
@@ -74,6 +80,8 @@ class ConfigLoader implements IConfigLoader
     }
 }
 ```
+
+:flashlight
 
 - ### Http Client
 
