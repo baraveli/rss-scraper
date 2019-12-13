@@ -16,6 +16,17 @@ class Client
         $this->client = new GuzzleClient();
     }
 
+    /**
+     * get
+     *
+     * Method to get the rss feed.
+     * 
+     * This method does parsing of xml to php array and validation checks before returning data.
+     * 
+     * @param  mixed $link
+     *
+     * @return void
+     */
     public function get($link)
     {
         $response = $this->client->request('GET', $link);
