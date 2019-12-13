@@ -42,6 +42,15 @@ class Client
         return $data;
     }
 
+    /**
+     * parseXML
+     * 
+     * This method decode the xml data to php array
+     *
+     * @param  mixed $xmlfile
+     *
+     * @return void
+     */
     protected function parseXML($xmlfile)
     {
         $json = json_encode($xmlfile);
