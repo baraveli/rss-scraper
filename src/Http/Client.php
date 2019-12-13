@@ -25,15 +25,10 @@ class Client
             throw new \Exception("The file doesn't contain valid XML");
         }
 
-        $xmlfile = $this->loadXML($responseBody);
+        $xmlfile = simplexml_load_string($responseBody);
         $data = $this->parseXML($xmlfile);
 
         return $data;
-    }
-
-    protected function loadXML($xmlbody)
-    {
-        return simplexml_load_string($xmlbody);
     }
 
     protected function parseXML($xmlfile)

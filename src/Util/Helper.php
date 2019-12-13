@@ -4,9 +4,12 @@ namespace Baraveli\RssScraper\Util;
 
 trait Helper
 {
+
     /**
      * isValidXml
      *
+     * Helper method to check if the passed content is valid xml
+     * 
      * @param  mixed $content
      *
      * @return void

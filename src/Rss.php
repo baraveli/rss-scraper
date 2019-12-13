@@ -2,31 +2,35 @@
 
 namespace Baraveli\RssScraper;
 
-use Baraveli\RssScraper\Util\ConfigLoader;
 use Baraveli\RssScraper\Http\Client;
 use Baraveli\RssScraper\Interfaces\IRss;
-use Baraveli\RssScraper\RssBaseUtil;
-use Baraveli\RssScraper\Util\FilterData;
+use Baraveli\RssScraper\Collections\ArticleCollection;
+use Baraveli\RssScraper\Util\{ConfigLoader, FilterData, Helper};
 
-class Rss extends RssBaseUtil implements IRss
+class Rss implements IRss
 {
     use FilterData;
+    use Helper;
 
     private $rss_sources = array();
     private $config_data;
     private $client;
 
-    public $data = array();
+    private $collection;
+
 
     public function __construct()
     {
         $this->config_data = ConfigLoader::load('config');
         $this->client = new Client();
+        $this->collection = new ArticleCollection();
     }
 
     /**
      * getRss
      *
+     * Method to get the rss feeds
+     * 
      * @return void
      */
     public function getRss()
@@ -38,22 +42,8 @@ class Rss extends RssBaseUtil implements IRss
             $this->data[] = $this->client->get($link);
         }
 
-        $articleItems[] = $this->filter($this->data);
+        $this->collection->add($this->filter($this->data));
 
-        $data = $this->response($articleItems);
-
-        return $data;
-    }
-
-    /**
-     * response
-     *
-     * @param  mixed $data
-     *
-     * @return void
-     */
-    protected function response($data)
-    {
-        return $this->sendResponse($data, 'Rss feed scraped successfuly');
+        return $this->collection;
     }
 }

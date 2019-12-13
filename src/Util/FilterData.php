@@ -11,6 +11,9 @@ trait FilterData
      *
      * @param  mixed $items
      *
+     * This function is responsible for filtering out the rss and getting article item inside the rss feed.
+     * 
+     * 
      * @return void
      */
     public function filter($items)

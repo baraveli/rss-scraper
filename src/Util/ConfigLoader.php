@@ -11,6 +11,8 @@ class ConfigLoader implements IConfigLoader
      *
      * @param  mixed $filename
      *
+     * This static method loads configuration files from the configs directory
+     * 
      * @return array
      */
     public static function load(string $filename): array
