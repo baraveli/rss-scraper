@@ -4,29 +4,21 @@
 
 Rss Scraper to scrap rss feed from news websites.
 
-:rocket:
-
-## Installation
+## :rocket: Installation
 
 ```shell
 composer require baraveli/rss-scraper
 ```
 
-satellite:
-
-## Rss Scraper Specs
+## :satellite: Rss Scraper Specs
 
 This documentation decribe the rss scraper structure,usage and how the individual components work in the libary.
 
-:crystal_ball:
-
-## General Explanation
+## :crystal_ball: General Explanation
 
 The rss scraper get the rss feed of the news from the configuration and get the rss feed items and return the data as a json response or an array.
 
-:hammer:
-
-- ### Config loader
+- ### :hammer: Config loader
 
 Rss scraper configurations are stored in the configs directory as <code>config.json</code> file. The config file has the information about the rss feeds that the rss scraper calls to scrap the rss feed.
 
@@ -81,9 +73,7 @@ class ConfigLoader implements IConfigLoader
 }
 ```
 
-:flashlight
-
-- ### Http Client
+- ### :flashlight Http Client
 
 Client class inside the Http directory of the rss scraper is used to send a http get request to the rss feed url to get the content. The class get method gets the content of the rss url and check if the returned data is a validxml content. <code>isValidXmL()</code> is helper method that is provided by the helper trait. if the isvalidxml check passes the xml file is then pass to the <code>simplexml_load_string()</code> function that is built into php. the returned loaded string get passed to <code>parseXML</code> method to return the decoded version of the xml file to php array. The data is then returned.
 
