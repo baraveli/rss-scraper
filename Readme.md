@@ -4,6 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/baraveli/rss-scraper/v/stable)](https://packagist.org/packages/baraveli/rss-scraper)
 [![License](https://poser.pugx.org/baraveli/rss-scraper/license)](https://packagist.org/packages/baraveli/rss-scraper)
 
+![Rss Scraper logo](https://jinas.me/images/baravelirss-01.jpg)
 Rss Scraper to scrap rss feed from news websites.
 
 ## :rocket: Installation
