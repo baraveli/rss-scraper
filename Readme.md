@@ -4,6 +4,8 @@
 
 Rss Scraper to scrap rss feed from news websites.
 
+:rocket:
+
 ## Installation
 
 ```shell
