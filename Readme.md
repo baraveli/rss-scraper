@@ -13,6 +13,10 @@ Rss Scraper to scrap rss feed from news websites.
 composer require baraveli/rss-scraper
 ```
 
+## Usage
+
+To use this package when you install it be sure to create a config.json file inside your application and specify the sites you want to index.
+
 ## :satellite: Rss Scraper Specs
 
 This documentation decribe the rss scraper structure,usage and how the individual components work in the libary.
@@ -57,15 +61,18 @@ class ConfigLoader implements IConfigLoader
      * @param  mixed $filename
      *
      * This static method loads configuration files from the configs directory
-     * 
+     *
      * @return array
      */
     public static function load(string $filename): array
     {
         $path = IConfigLoader::DIRECTORY_PATH . $filename .  '.json';
+        if (!file_exists($path)) {
+            $path = getcwd() . '/'. $filename .  '.json';
+        }
 
         $file = file_get_contents($path, FILE_USE_INCLUDE_PATH);
-        $urls = json_decode($file, TRUE);
+        $urls = json_decode($file, true);
 
         if (!isset($file, $urls)) {
             throw new \Exception("Error reading the config file or it it is empty");
@@ -74,6 +81,7 @@ class ConfigLoader implements IConfigLoader
         return $urls;
     }
 }
+
 ```
 
 - ### :flashlight: Http Client

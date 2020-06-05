@@ -19,7 +19,7 @@ class ConfigLoader implements IConfigLoader
     {
         $path = IConfigLoader::DIRECTORY_PATH . $filename .  '.json';
         if (!file_exists($path)) {
-            $path = getcwd() . '/vendor/baraveli/rss-scraper/configs/'. $filename .  '.json';
+            $path = getcwd() . '/'. $filename .  '.json';
         }
 
         $file = file_get_contents($path, FILE_USE_INCLUDE_PATH);
