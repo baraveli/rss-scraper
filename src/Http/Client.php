@@ -2,8 +2,8 @@
 
 namespace Baraveli\RssScraper\Http;
 
-use GuzzleHttp\Client as GuzzleClient;
 use Baraveli\RssScraper\Util\Helper;
+use GuzzleHttp\Client as GuzzleClient;
 
 class Client
 {
@@ -17,13 +17,13 @@ class Client
     }
 
     /**
-     * get
+     * get.
      *
      * Method to get the rss feed.
-     * 
+     *
      * This method does parsing of xml to php array and validation checks before returning data.
-     * 
-     * @param  mixed $link
+     *
+     * @param mixed $link
      *
      * @return void
      */
@@ -43,11 +43,11 @@ class Client
     }
 
     /**
-     * parseXML
-     * 
+     * parseXML.
+     *
      * This method decode the xml data to php array
      *
-     * @param  mixed $xmlfile
+     * @param mixed $xmlfile
      *
      * @return void
      */

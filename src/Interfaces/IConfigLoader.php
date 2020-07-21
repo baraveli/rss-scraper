@@ -4,12 +4,12 @@ namespace Baraveli\RssScraper\Interfaces;
 
 interface IConfigLoader
 {
-    public const DIRECTORY_PATH = "./../";
+    public const DIRECTORY_PATH = './../';
 
     /**
-     * load
+     * load.
      *
-     * @param  mixed $filename
+     * @param mixed $filename
      *
      * @return void
      */

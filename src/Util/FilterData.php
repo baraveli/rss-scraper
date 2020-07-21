@@ -4,23 +4,21 @@ namespace Baraveli\RssScraper\Util;
 
 trait FilterData
 {
-    public $filtered_data = array();
+    public $filtered_data = [];
 
     /**
-     * filter
+     * filter.
      *
-     * @param  mixed $items
+     * @param mixed $items
      *
      * This function is responsible for filtering out the rss and getting article item inside the rss feed.
-     * 
-     * 
+     *
      * @return void
      */
     public function filter($items)
     {
         foreach ($items as $item) {
-
-            $item = $item["channel"]["item"];
+            $item = $item['channel']['item'];
 
             array_push($this->filtered_data, $item);
         }

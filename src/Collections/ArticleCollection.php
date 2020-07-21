@@ -6,14 +6,13 @@ use Countable;
 
 class ArticleCollection implements Countable
 {
-
     protected $items = [];
 
     /**
-     * __toString
+     * __toString.
      *
      * Jsonify the collection automatically when the trying to output as a string.
-     * 
+     *
      * @return void
      */
     public function __toString()
@@ -21,12 +20,11 @@ class ArticleCollection implements Countable
         return $this->jsonify();
     }
 
-
     /**
-     * add
+     * add.
      *
-     * @param  mixed $value
-     * 
+     * @param mixed $value
+     *
      * Method to add items to the collection array.
      *
      * @return void
@@ -37,10 +35,10 @@ class ArticleCollection implements Countable
     }
 
     /**
-     * get
+     * get.
      *
-     * @param  mixed $key
-     * 
+     * @param mixed $key
+     *
      * Method to get the items from the collection array given a (int)key value
      *
      * @return void
@@ -51,10 +49,10 @@ class ArticleCollection implements Countable
     }
 
     /**
-     * jsonify
-     * 
+     * jsonify.
+     *
      * Method to convert the response to json
-     * 
+     *
      * This method is chainable with the getrss() function.
      *
      * @return void
@@ -64,14 +62,13 @@ class ArticleCollection implements Countable
         return json_encode($this->items);
     }
 
-    
     /**
-     * toArray
+     * toArray.
      *
      * Method to return the response as an array
-     * 
+     *
      * This method is chainable with the getrss() function.
-     * 
+     *
      * @return void
      */
     public function toArray()
@@ -80,10 +77,10 @@ class ArticleCollection implements Countable
     }
 
     /**
-     * count
+     * count.
      *
      * Method to count how many items are in the article collection array
-     * 
+     *
      * @return void
      */
     public function count()

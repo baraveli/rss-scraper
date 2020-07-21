@@ -1,11 +1,11 @@
 <?php
+
 namespace Baraveli\RssScraper\Interfaces;
 
 interface IRss
 {
-    
     /**
-     * getRss
+     * getRss.
      *
      * @return void
      */

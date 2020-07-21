@@ -4,13 +4,12 @@ namespace Baraveli\RssScraper\Util;
 
 trait Helper
 {
-
     /**
-     * isValidXml
+     * isValidXml.
      *
      * Helper method to check if the passed content is valid xml
-     * 
-     * @param  mixed $content
+     *
+     * @param mixed $content
      *
      * @return void
      */
@@ -22,6 +21,7 @@ trait Helper
         if (empty($content) || stripos($content, '<!DOCTYPE html>') !== false) {
             $isValid = false;
         }
+
         return $isValid;
     }
 }
