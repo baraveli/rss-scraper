@@ -2,22 +2,23 @@
 
 namespace Baraveli\RssScraper;
 
+use Baraveli\RssScraper\Collections\ArticleCollection;
 use Baraveli\RssScraper\Http\Client;
 use Baraveli\RssScraper\Interfaces\IRss;
-use Baraveli\RssScraper\Collections\ArticleCollection;
-use Baraveli\RssScraper\Util\{ConfigLoader, FilterData, Helper};
+use Baraveli\RssScraper\Util\ConfigLoader;
+use Baraveli\RssScraper\Util\FilterData;
+use Baraveli\RssScraper\Util\Helper;
 
 class Rss implements IRss
 {
     use FilterData;
     use Helper;
 
-    private $rss_sources = array();
+    private $rss_sources = [];
     private $config_data;
     private $client;
 
     private $collection;
-
 
     public function __construct()
     {
@@ -27,10 +28,10 @@ class Rss implements IRss
     }
 
     /**
-     * getRss
+     * getRss.
      *
      * Method to get the rss feeds
-     * 
+     *
      * @return void
      */
     public function getRss()

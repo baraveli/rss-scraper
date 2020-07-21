@@ -1,8 +1,7 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
-
 use Baraveli\RssScraper\Util\Helper;
+use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
 {

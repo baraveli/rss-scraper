@@ -7,9 +7,9 @@ use Baraveli\RssScraper\Interfaces\IConfigLoader;
 class ConfigLoader implements IConfigLoader
 {
     /**
-     * load
+     * load.
      *
-     * @param  mixed $filename
+     * @param mixed $filename
      *
      * This static method loads configuration files from the configs directory
      *
@@ -17,16 +17,16 @@ class ConfigLoader implements IConfigLoader
      */
     public static function load(string $filename): array
     {
-        $path = IConfigLoader::DIRECTORY_PATH . $filename .  '.json';
+        $path = IConfigLoader::DIRECTORY_PATH.$filename.'.json';
         if (!file_exists($path)) {
-            $path = getcwd() . '/'. $filename .  '.json';
+            $path = getcwd().'/'.$filename.'.json';
         }
 
         $file = file_get_contents($path, FILE_USE_INCLUDE_PATH);
         $urls = json_decode($file, true);
 
         if (!isset($file, $urls)) {
-            throw new \Exception("Error reading the config file or it it is empty");
+            throw new \Exception('Error reading the config file or it it is empty');
         }
 
         return $urls;
